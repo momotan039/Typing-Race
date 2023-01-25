@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+
+body,html{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    height: 100%;
+}
+
+.center{
+width: 100%;
+background-color: white;
+text-align: center;
+padding: 50px 0;
+}
+.center .words{
+    position: relative;
+    display: flex;
+    gap: 53px;
+    justify-content: center;
+    align-items: center;
+}
+.center .words .line{
+    position: absolute;
+    background-color: grey;
+    height: 5px;
+    border-radius: 22px;
+    width: 100%;
+}
+.center .words span{
+    width: 90px;
+    height: 76px;
+    position: relative;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: all .3s;
+}
+.center .words span.pass{
+    font-weight: bold;
+    scale: 1.1;
+}
+.center .words span::before{
+    position: absolute;
+    content: attr(data-num);
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    padding: 7px;
+    height: 28px;
+    width: 28px;
+    background-color: grey;
+    border-radius: 50%;
+    top: 10px;
+    transition: all .3s;
+}
+.center .words span.pass::before{
+    background-color: #f19814;
+}
+.center .goal{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.center .goal .letters {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.center .goal span{
+    transition: all .3s;
+}
+.center .goal span.wrong{
+    color: red;
+    text-decoration: underline;
+}
+.center .goal span.pass{
+    color: #ffc107;
+    font-size: 34px;
+}
+.center .word{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+}
+
+.center .word .char{
+    color: white;
+    padding: 10px 20px;
+    background: #f19814;
+    border-radius: 20px;
+    font-size: 47px;
+    width: 70px;
+}
+
+.container button{
+    color: red;
+    padding: 20px 40px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.container button:hover{
+    background-color: red;
+    color: white;
+}
+.container button.pass,
+.container button.pass:hover{
+    background-color: #ffeb3b;
+    color: black;
+}
+
+.container-result{
+    position: absolute;
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: all .3s;
+}
+.container-result.hide{
+    scale: 0;
+}
+.container-result .panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    background-color: #ffc107;
+    width: 466px;
+    color: white;
+    text-align: center;
+    height: 269px;
+    padding: 19px;
+    border-radius: 10px;
+}
+
+.container-result .panel h1{
+    font-size: 41px;
+}
+.container-result .panel h3{
+    font-size: 28px;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-result .close{
+    position: absolute;
+    content: '';
+    right: 0;
+    background: #c91313;
+    padding: 8px 20px;
+    top: -14px;
+    right: -20px;
+    border-radius: 16px;
+    font-size: 51px;
+    font-weight: bold;
+    cursor: pointer;
+}

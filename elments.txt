@@ -1,0 +1,9 @@
+ <!-- <div class="container-result">
+        <div class="panel">
+            <h1>Score:50</h1>
+            <h3>Keep Going</h3>
+            <div class="close">X</div>
+        </div>
+    </div> -->
+
+    
